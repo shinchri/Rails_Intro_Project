@@ -5,5 +5,4 @@ class Food < ApplicationRecord
   validates :description, presence: true
   validates :recipe, presence: true
   validates :price, presence: true
-  validates :price,
 end
