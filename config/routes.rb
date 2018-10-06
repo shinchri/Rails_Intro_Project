@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'foods/index'
+  get 'foods/show'
   get 'chefs/index'
   get 'chefs/show'
   get 'restaurants/index'
