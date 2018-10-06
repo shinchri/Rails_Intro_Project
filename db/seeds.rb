@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+// remove all data from the database
+Chef.destroy_all
+Restaurant.destroy_all
+Food.destroy_all
