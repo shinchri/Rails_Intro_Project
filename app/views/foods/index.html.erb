@@ -5,3 +5,5 @@
     <li><%= link_to food.name, food %> with price of $<%= food.price %></li>
   <% end %>
 </ul>
+
+<%= paginate @foods, window: 1, outer_window: 1%>

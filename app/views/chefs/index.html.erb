@@ -6,3 +6,5 @@
     <li><%= link_to chef.name, chef %></li>
   <% end %>
 </ul>
+
+<%= paginate @chefs, window: 1, outer_window: 1%>
