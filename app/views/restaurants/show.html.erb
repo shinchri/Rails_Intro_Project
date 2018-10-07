@@ -1,2 +1,19 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<h2><%= @restaurant.name %>'s Profile</h2>
+
+<p>Address: <%= @restaurant.address %></p>
+<p>Description: <%= @restaurant.description %></p>
+<p>Review: <%= @restaurant.review %></p>
+
+<h3>Chefs Working</h3>
+<ul>
+  <% @chefs.each do |chef| %>
+  <li><%= chef.name %></li>
+  <% end %>
+</ul>
+
+<h3>Foods Served</h3>
+<ul>
+  <% @foods.each do |food| %>
+  <li><%= food.name %> @ $<%= food.price %></li>
+  <% end %>
+</ul>
