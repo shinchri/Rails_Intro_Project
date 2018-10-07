@@ -1,2 +1,9 @@
-<h1>Chefs#show</h1>
-<p>Find me in app/views/chefs/show.html.erb</p>
+<h2><%= @chef.name %>'s Profile</h2>
+
+<p>Works at: <%= @restaurant.name %> restaurant</p>
+
+<p>Specialty food includes:
+  <% @specialty_foods.each do |food| %>
+    <%= food.name %>,
+  <% end %>
+</p>

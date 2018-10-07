@@ -3,6 +3,6 @@
 
 <ul>
   <%@chefs.each do |chef| %>
-    <li><%= chef.name %></li>
+    <li><%= link_to chef.name, chef %></li>
   <% end %>
 </ul>

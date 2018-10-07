@@ -7,8 +7,13 @@ Rails.application.routes.draw do
 
   get 'foods/index'
   get 'foods/show'
-  get 'chefs/index'
-  get 'chefs/show'
+
+  #get 'chefs/index'
+  #get 'chefs/show'
+  # seems to work with localhost:3000/chefs
+  # for some reason, localhost:3000/chefs/index fails
+  resources :chefs, only: [:index, :show]
+
   get 'restaurants/index'
   get 'restaurants/show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
