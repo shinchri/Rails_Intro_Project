@@ -1,0 +1,16 @@
+<h2>About Website Description</h2>
+
+<p>Data Sources: <a href="https://github.com/stympy/faker">Faker Gem</a> and <a href="http://www.recipepuppy.com/about/api/">Recipe Puppy</a></p>
+
+<p>In the project, there will be three tables used: restaurants, chefs, and foods.</p>
+
+<p>There will be one-to-many relationship between Restaurant and Chef.</p>
+
+<p>There will be many-to-many relationship between Restarant and Food.</p>
+
+<h3>Fields:</h3>
+<p>restaurants: name, address, description, review</p>
+<p>chefs: name</p>
+<p>foods: name, recipe(description), price</p>
+
+<p>The api data from Recipe Puppy will be in the json file. I will be using http gem to convert the content into a string, then parse it using JSON parser. The foods table's name and recipe columns will be from this data. The rest of the columns in other tables are from Faker gem.</p>
