@@ -4,12 +4,52 @@
     <title>PracticeProject01</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+
+        <div class = "navbar-header">
+          <%= link_to "PROJECT 01", root_path, class:"navbar-brand" %>
+        </div>
+
+        <div>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Restaurants", controller: "restaurants", action: "index" %></li>
+            <li><%= link_to "Chefs", chefs_path %></li>
+            <li><%= link_to "Foods", foods_path %></li>
+            <li><%= link_to "About", root_path %></li>
+
+            <!-- drop down menu -->
+            <!--
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Restaurants</a></li>
+                <li><a href="#">Chefs</a></li>
+                <li><a href="#">Foods</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </li>
+          -->
+
+          </ul>
+          <!-- right align -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
     <%= yield %>
+
   </body>
 </html>
