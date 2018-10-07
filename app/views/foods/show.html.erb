@@ -1,2 +1,16 @@
-<h1>Foods#show</h1>
-<p>Find me in app/views/foods/show.html.erb</p>
+<h2><%= @food.name %></h2>
+
+<p>The recipe:
+<%= @food.recipe %>
+</p>
+
+<p>It current price is: $<%= @food.price %></p>
+
+<h3>Where can you go to try it?</h3>
+<p>The restaurants that sell this wonderful dish include:</p>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><b><%= restaurant.name %></b> located at <b><%= restaurant.address %></b></li>
+  <% end %>
+</ul>

@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   # <%= link_to: 'About Us', about_path %> 'about' in 'about_path' is from 'as'
   get 'about', to: 'pages#about', as: 'about'
 
-  get 'foods/index'
-  get 'foods/show'
+  #get 'foods/index'
+  #get 'foods/show'
+  resources :foods, only: [:index, :show]
 
   #get 'chefs/index'
   #get 'chefs/show'

@@ -2,6 +2,6 @@
 
 <ul>
   <%@foods.each do |food| %>
-    <li><%= food.name %> with price of $<%= food.price %></li>
+    <li><%= link_to food.name, food %> with price of $<%= food.price %></li>
   <% end %>
 </ul>
